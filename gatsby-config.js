@@ -2,10 +2,10 @@ const path = require('path');
 const LANDING_NAME = path.basename(__dirname);
 
 
-const SITE_URL = `https://kotlinlang.org/lp/${LANDING_NAME}`;
+const SITE_URL = `https://ujenjt.github.io/gatsby-test/`;
 
 module.exports = {
-  pathPrefix: `/lp/${LANDING_NAME}`,
+  pathPrefix: `/gatsby-test`,
   siteMetadata: {
     title: `Kotlin Programming Language`,
     description: ``,

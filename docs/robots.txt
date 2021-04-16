@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://kotlinlang.org/lp/gatsby-test/sitemap.xml
-Host: https://kotlinlang.org
+Sitemap: https://ujenjt.github.io/gatsby-test//sitemap.xml
+Host: https://ujenjt.github.io

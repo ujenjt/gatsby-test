@@ -5,7 +5,7 @@ export const DEFAULT_THEME = 'light';
 const ThemeSwitcherContext = React.createContext({
   themeId: DEFAULT_THEME,
   setThemeId: () => {
-    console.warn(“attemp to switch theme outside of a ThemeContext provider”)
+    console.warn("attemp to switch theme outside of a ThemeContext provider")
   }
 });
 

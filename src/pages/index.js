@@ -1,56 +1,37 @@
-import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
-import '../styles/index.css';
+import React from 'react';
+import { Link } from 'gatsby';
 
-function Index() {
-  const [date, setDate] = useState(null);
-  useEffect(() => {
-    async function getDate() {
-      const res = await fetch('/api/date');
-      const newDate = await res.text();
-      setDate(newDate);
-    }
-    getDate();
-  }, []);
-  return (
-    <main>
-      <Helmet>
-        <title>Gatsby + Node.js (TypeScript) API</title>
-      </Helmet>
-      <h1>Gatsby + Node.js (TypeScript) API</h1>
-      <h2>
-        Deployed with{' '}
-        <a
-          href="https://vercel.com/docs"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Vercel
-        </a>
-        !
-      </h2>
-      <p>
-        <a
-          href="https://github.com/vercel/vercel/tree/master/examples/gatsby"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          This project
-        </a>{' '}
-        is a <a href="https://www.gatsbyjs.org/">Gatsby</a> app with two
-        directories, <code>/src</code> for static content and <code>/api</code>{' '}
-        which contains a serverless{' '}
-        <a href="https://nodejs.org/en/">Node.js (TypeScript)</a> function. See{' '}
-        <a href="/api/date">
-          <code>api/date</code> for the Date API with Node.js (TypeScript)
-        </a>
-        .
-      </p>
-      <br />
-      <h2>The date according to Node.js (TypeScript) is:</h2>
-      <p>{date ? date : 'Loading date...'}</p>
-    </main>
-  );
-}
+import Layout from '../components/layout';
+import { Form } from '../components/form';
+import SEO from '../components/seo';
 
-export default Index;
+const IndexPage = () => (
+  <Layout>
+
+    {/* eslint-disable-next-line react/jsx-pascal-case */}
+    <SEO title="" />
+    <section className="wt-container wt-offset-top-48">
+      <div className="wt-row wt-row_size_m">
+        <h2 className="wt-h2 wt-col-12">
+          Ktor Project Generator
+        </h2>
+      </div>
+
+      <div className="wt-row wt-row_size_m wt-offset-top-8">
+        <p className="wt-text-2 wt-text-2_hardness_hard wt-col-8">
+        You can create a Ktor project in two simple steps. Enter your project name and click “Add Features” to select the features you need. You can also fine-tune the settings of your project.
+        </p>
+      </div>
+
+      <div className="wt-row wt-row_size_m wt-offset-top-24">
+        <div className="wt-col-7">
+          <Form />
+        </div>
+      </div>
+
+    </section>
+
+  </Layout>
+);
+
+export default IndexPage;

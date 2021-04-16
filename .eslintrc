@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "@webteam/eslint-config",
+    "@webteam/eslint-config-prettier"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "{,.}*.js",
+        "**/.*.js"
+      ],
+      "env": {
+        "node": true
+      },
+      "rules": {
+        "import/no-commonjs": "off"
+      }
+    }
+  ]
+}

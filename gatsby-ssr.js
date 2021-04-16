@@ -5,3 +5,19 @@
  */
 
 // You can delete this file if you're not using it
+
+import React from 'react';
+import {
+  production,
+  development
+} from '@webteam/typography/lib/fonts-urls.json';
+
+export const onRenderBody = ({ setHeadComponents }) => {
+  setHeadComponents([
+    <link
+      key={'fonts-css'}
+      rel="stylesheet"
+      href={process.env.NODE_ENV === 'production' ? production : development}
+    />
+  ]);
+};

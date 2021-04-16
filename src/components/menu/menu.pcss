@@ -1,0 +1,54 @@
+@import '~@webteam/typography/lib/mixins.pcss';
+
+.link {
+  @mixin wt-text-1;
+
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+
+  text-decoration: none;
+
+  color: var(--wt-color-grey-dark);
+
+  &:hover {
+    color: var(--wt-color-primary-light-theme);
+  }
+
+  &.link-active {
+    font-weight: bold;
+  }
+
+  [class*='_theme_dark'] & {
+    color: var(--wt-color-white);
+
+    &:hover {
+      color: var(--wt-color-primary-dark-theme);
+    }
+  }
+
+  &.inside-horizontal-menu {
+    flex-direction: column;
+    justify-content: center;
+
+    /* for denying offset of the bolder item */
+    &::after {
+      display: block;
+      visibility: hidden;
+      overflow: hidden;
+
+      height: 0;
+
+      content: attr(title);
+
+      color: transparent;
+
+      font-weight: bold;
+    }
+  }
+}
+
+.ul {
+  list-style: none;
+}

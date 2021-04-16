@@ -1,21 +1,56 @@
 {
+  "name": "gatsby-starter-webteam",
   "private": true,
-  "name": "gatsby",
-  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "version": "0.0.0",
+  "author": "JetBrains",
   "dependencies": {
-    "gatsby": "^2.18.14",
-    "gatsby-image": "^2.0.15",
-    "gatsby-plugin-manifest": "^2.0.5",
-    "gatsby-plugin-react-helmet": "^3.0.0",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
-    "react-helmet": "^5.2.0"
+    "@webteam/breakpoints": "^0.6.4",
+    "@webteam/browserslist-config": "^0.0.4",
+    "@webteam/button": "^4.4.19",
+    "@webteam/colors": "^1.0.13",
+    "@webteam/eslint-config": "^0.4.4",
+    "@webteam/eslint-config-prettier": "^1.0.2",
+    "@webteam/focus-manager": "0.3.3",
+    "@webteam/gatsby-plugin-pcss": "^0.1.0",
+    "@webteam/icons": "2.1.1",
+    "@webteam/input": "^4.2.9",
+    "@webteam/layout": "^0.13.2",
+    "@webteam/postcss-preset": "^0.2.2",
+    "@webteam/select": "5.0.16",
+    "@webteam/switcher": "4.1.7",
+    "@webteam/typography": "^5.2.7",
+    "@webteam/ui-contexts": "^0.7.13",
+    "cn": "0.1.1",
+    "gatsby": "^2.19.27",
+    "gatsby-image": "^2.2.42",
+    "gatsby-plugin-alias-imports": "1.0.5",
+    "gatsby-plugin-google-tagmanager": "^2.1.25",
+    "gatsby-plugin-manifest": "^2.2.42",
+    "gatsby-plugin-postcss": "^2.1.20",
+    "gatsby-plugin-react-helmet": "^3.1.22",
+    "gatsby-plugin-robots-txt": "^1.5.0",
+    "gatsby-plugin-sharp": "^2.4.5",
+    "gatsby-source-filesystem": "^2.1.48",
+    "gatsby-transformer-sharp": "^2.3.16",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.0",
+    "react-collapsed": "3.0.2",
+    "react-dom": "^16.13.0",
+    "react-helmet": "^5.2.1",
+    "reset.css": "^2.0.2"
   },
   "devDependencies": {
-    "@vercel/node": "1.9.0"
+    "gatsby-plugin-sitemap": "^2.2.27",
+    "prettier": "^1.19.1"
   },
   "scripts": {
-    "dev": "gatsby develop",
-    "build": "gatsby build"
+    "build": "gatsby clean && gatsby build --prefix-paths",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "yarn run develop",
+    "serve": "gatsby serve --prefix-paths",
+    "clean": "gatsby clean"
   }
 }

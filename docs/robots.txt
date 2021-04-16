@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://kotlinlang.org/lp/gatsby-test/sitemap.xml
+Host: https://kotlinlang.org
